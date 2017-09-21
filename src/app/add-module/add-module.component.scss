@@ -1,0 +1,86 @@
+@import "./src/framework";
+
+:host(app-add-module) {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.add-module-wrapper {
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+
+  @include grid-column(9);
+  z-index: 100;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: $grid-row*2;
+  border-right: 1px solid $black3;
+  background-color: $black4;
+}
+.add-module-wrapper .title-wrapper {
+  position: relative;
+
+  .title {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0; left: 0;
+    @include grid-column(7);
+    height: $grid-row*2;
+    line-height: $grid-row*2;
+    padding-left: $grid-x*4;
+    border-bottom: 1px solid $black3;
+    border-right: 1px solid $black3;
+  }
+
+  .icon-wrapper {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0; right: 0;
+    @include grid-column(2);
+    height: $grid-row*2;
+    border-bottom: 1px solid $black3;
+
+    .button {@include button;}
+  }
+}
+
+.add-content-wrapper {
+  position: relative;
+
+  height: 100%;
+
+  &:hover {
+    .add-module-line {
+      display: block;
+    }
+  }
+}
+
+.add-module-line {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: $grid-row;
+
+  .line {
+    position: absolute;
+    width: 100%;
+    top: $grid-row/2-1;
+    border-bottom: 1px dashed $black3;
+  }
+  .button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: $grid-row/2-1-12;
+    left: 50%;
+    margin-left: -12px;
+  }
+}
