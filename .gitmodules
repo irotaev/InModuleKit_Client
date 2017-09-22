@@ -1,0 +1,3 @@
+[submodule "src/app/Angular2ComponentKit_Base"]
+	path = src/app/Angular2ComponentKit_Base
+	url = ../Angular2ComponentKit_Base.git
